@@ -1,3 +1,3 @@
 # xpns nuker
 place bot token the prefix is ! or change if u want.
-skids piss me off
+This nuker is old an outdated but it still works
